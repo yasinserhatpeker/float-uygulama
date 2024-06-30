@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
 header, footer{
     background-color: purple;
     font-size: 25px;
@@ -14,15 +17,24 @@ header, footer{
 }
 .menu{
     width: 25%;
-    height: 300px;
+    
     background-color: red;
+    
+}
+.col{
     float: left;
+  
 }
 .content{
     width: 75%;
-    height: 300px;
+  
     background-color: green;
-    float: right;
+    
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
 }
     </style>
 
@@ -32,15 +44,19 @@ header, footer{
 <header>
     <h2>Header</h2>
 </header>
-<main>
-    <div class="menu">
+<main class="clearfix">
+    <div class="menu col">
         <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
         </ul>
     </div>
-    <div class="content"></div>
+    <div class="content col">
+        <h2>Komple Web Geliştirme Eğitimi</h2>
+        <p><b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic molestiae impedit voluptate saepe ipsam commodi recusandae cumque nostrum, facere laudantium accusamus voluptatem eos, ut, quisquam dolore odit eius asperiores corporis.</b></p>
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, eligendi. Laudantium ipsam inventore eligendi odit, non vel reprehenderit? Vitae tempore accusamus commodi dolore magnam quos alias nulla, deserunt facere deleniti voluptatum aut suscipit numquam repellendus ratione culpa mollitia debitis? Quasi?</b></p>
+    </div>
 </main>
 
 
